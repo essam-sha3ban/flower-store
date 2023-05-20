@@ -1,0 +1,534 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    text-transform: capitalize;
+    outline: none;
+    border: none;
+    transition: .5s linear
+}
+
+:root {
+    --color: #e84393
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden
+}
+
+.container {
+    padding: 2rem 9%;
+    margin-left: 15px;
+    margin-right: 15px
+}
+
+a {
+    color: black
+}
+/*-----start header------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+    background-color: white;
+    padding: 2rem 9%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    box-shadow: 0 0 12px 0 rgb(128, 128, 128);
+}
+
+    header .logo {
+        font-size: 2rem;
+        font-weight: bold
+    }
+
+    header .navBar {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.4rem
+    }
+
+        header .navBar a {
+            padding: 0 15px;
+            font-size: 1.4rem;
+            color: rgb(128, 128, 128)
+        }
+
+    header i {
+        padding: 0 8px;
+        font-size: 2rem;
+        color: rgb(128, 128, 128)
+    }
+
+    header a:not(.logo):hover, i:hover {
+        color: var(--color)
+    }
+
+    header .fa-bars {
+        font-size: 2rem;
+        color: #333;
+        padding: .5rem 1.5rem;
+        cursor: pointer;
+        border: 1px solid rgb(0 0 0 /.3);
+        display: none
+    }
+
+#togglers {
+    display: none
+}
+
+/*--------- start home--------------*/
+.home {
+    background-image: url(../images/home-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    margin: 61px 0;
+    align-items: center;
+    display: flex;
+}
+
+    .home .contant {
+        max-width: 400px
+    }
+
+        .home .contant h1 {
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .home .contant h3 {
+            font-size: 1.5rem;
+            color: var(--color);
+            padding: 5px 0 10px
+        }
+
+        .home .contant p {
+            font-size: 1.2rem;
+            color: #999;
+            padding-bottom: 5px;
+            letter-spacing: 1.2px;
+            line-height: 1.3;
+        }
+
+.btn {
+    font-size: 1.5rem;
+    padding: 10px;
+    background: #694b4b;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 5px
+}
+
+    .btn:hover {
+        background: var(--color)
+    }
+
+/*-------start about-------*/
+.title {
+    text-align: center;
+    background: rgb(244 237 241);
+    margin: 20px 0;
+    padding: 10px 0;
+    font-size: 2rem;
+}
+
+    .title span {
+        font-size: 2rem;
+        color: var(--color)
+    }
+
+.about {
+}
+
+    .about .contant {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 20px;
+        padding: 10px 0
+    }
+
+    .about .video {
+        position: relative;
+        flex: 1
+    }
+
+
+        .about .video h2 {
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: white;
+            padding: 13px;
+            width: 100%;
+            font-size: 1.5rem;
+            mix-blend-mode: screen
+        }
+
+video {
+    width: 100%;
+    border: 5px solid #fff;
+    border-radius: 13px;
+    box-shadow: 0 1px 1px rgb(0 0 0 / .1)
+}
+
+.about .text {
+    flex: 1;
+}
+
+    .about .text h3 {
+        font-size: 1.5rem;
+    }
+
+    .about .text p {
+        padding: 1rem 0 1rem;
+        padding-top: 1rem;
+        line-height: 1.8;
+        color: #999;
+        font-size: 1.3rem;
+    }
+/*------start icons--------*/
+
+.icons {
+    background: #f6f5f5;
+    padding: 20px 0;
+}
+
+    .icons .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px
+    }
+
+    .icons .box {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        background: #fff;
+        padding: 5px;
+        border-radius: 7px
+    }
+
+    .icons p {
+        color: #747472;
+        padding: 5px 0 0;
+    }
+
+/*-------start product----------*/
+.product {
+}
+
+    .product .contant {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .product .box {
+        position: relative;
+        box-shadow: 0 0 12px 0 rgb(0 0 0 / 10%);
+        border-radius: 10px;
+        border: 1px solid #eee
+    }
+
+        .product .box .descount {
+            background: #ede4e8;
+            margin: 10px;
+            color: var(--color);
+            display: block;
+            width: fit-content;
+            padding: 3px;
+            font-size: 1.5rem;
+            border-radius: 5px;
+        }
+
+    .product .image {
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+        padding-bottom: 10px;
+    }
+
+        .product .image img {
+            max-width: 100%
+        }
+
+    .product .box :hover.image img {
+        transform: scale(1.1)
+    }
+
+    .product .icon {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        right: 0;
+        display: flex;
+    }
+
+    .product .box :hover.image .icon {
+        bottom: 0
+    }
+
+.icon a {
+    height: 35px;
+    width: 50%;
+    background: var(--color);
+    color: #fff;
+    line-height: 2;
+    font-size: 2rem
+}
+
+    .icon a:hover {
+        background: #333
+    }
+
+.icon .cart {
+    font-size: 1.5rem;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+    width: 100%
+}
+
+.product .box h3 {
+    padding: 10px;
+    font-size: 1.8rem;
+    padding: 7px
+}
+
+.product .pric {
+    padding: 10px;
+    font-size: 1.3rem;
+    color: var(--color)
+}
+
+    .product .pric span {
+        color: black;
+        font-size: 1rem;
+        text-decoration: line-through
+    }
+
+/*-----start review------*/
+.review .contant {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    align-items: center;
+    gap: 30px;
+}
+
+.review .comment {
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 10%);
+    padding: 10px;
+    cursor: pointer;
+}
+
+    .review .comment:hover {
+        transform: skew(170deg);
+    }
+
+    .review .comment i {
+        color: var(--color);
+        padding-right: 5px;
+        font-size: 1.8rem;
+        margin-bottom: 10px
+    }
+
+    .review .comment p {
+        color: #959292;
+        line-height: 1.5;
+        font-size: 1.3rem;
+        margin: 10px 0;
+    }
+
+.review .user {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start
+}
+
+    .review .user img {
+        width: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+    .review .user div h3 {
+        font-size: 1.8rem;
+    }
+
+    .review .user div p {
+        margin: 0
+    }
+
+
+/*---------start massame-------------*/
+.contact .contant {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.contact form {
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 0 12px 0 rgb(0 0 0 / 10%);
+    border: 1px solid #eee;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 10px;
+}
+
+form .mas {
+    height: 130px
+}
+
+
+
+form input {
+    width: 400px;
+    height: 30px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.7rem;
+}
+
+    form input:focus {
+        border-color: var(--color)
+    }
+
+.contact .image {
+    flex: 1 1 40rem;
+    text-align: center;
+}
+
+.contact img {
+    max-width: 600px;
+    width: 100%;
+    border-radius: 10px
+}
+
+/*----------start footer-----------------*/
+.fotter {
+    background: #e9e5e5;
+}
+
+    .fotter .contant {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 10px
+    }
+
+    .fotter div {
+        display: flex;
+        flex-direction: column;
+    }
+
+        .fotter div h3 {
+            font-size: 2rem;
+            margin: 10px 0
+        }
+
+        .fotter div a {
+            font-size: 1.3rem;
+            margin: 5px 0;
+            color: #999
+        }
+
+            .fotter div a:hover {
+                color: var(--color)
+            }
+
+    .fotter img {
+        cursor: pointer;
+        margin: 10px 0
+    }
+
+    .fotter hr {
+        background: #694b4b;
+        height: 1px;
+        opacity: .3;
+        margin: 10px 0;
+    }
+
+    .fotter .copy {
+        font-size: 15px;
+        text-align: center;
+        padding-bottom: 20px;
+        display: block
+    }
+
+    .fotter span:last-child {
+        font-size: 15px;
+        text-align: center;
+        padding-bottom: 20px;
+        color: var(--color)
+    }
+
+
+
+
+/*-------media quary----------*/
+@media(max-width:800px) {
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navBar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: #eee;
+        border-top: 1px solid rgb(0 0 0 / 0.1);
+        display: block;
+        clip-path: polygon(0% 0%, 100% 0, 100% 0%, 0% 0%);
+    }
+
+    header #togglers:checked ~ .navBar {
+        clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    header .navBar a {
+        display: block;
+        padding: 1rem;
+        margin: 1rem;
+        background: #fff;
+        border: 1px solid rgb(0 0 0 / .1);
+    }
+}
+/*----about-----*/
+@media (max-width:991px) {
+    .about .contant {
+        flex-direction: column
+    }
+}
+/*------icons----------*/
+@media(max-width:600px) {
+    .icons .box {
+        width: 300px;
+        justify-content: center;
+        align-items: center
+    }
+}
